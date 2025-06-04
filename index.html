@@ -8,8 +8,8 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #000;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -19,35 +19,46 @@
       text-align: center;
     }
     h1 {
-      font-size: 2.5em;
-      color: #0ff;
+      font-size: 2.8em;
+      color: #00f2ff;
+      margin-bottom: 0.5em;
     }
     p {
       font-size: 1.2em;
       max-width: 600px;
+      color: #ccc;
     }
     .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #0ff;
+      margin-top: 30px;
+      padding: 12px 28px;
+      background: #00f2ff;
       color: #000;
       border: none;
-      border-radius: 6px;
+      border-radius: 50px;
       font-size: 1em;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
       cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #0ff;
     }
     footer {
       position: absolute;
       bottom: 20px;
       font-size: 0.9em;
-      color: #888;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <h1>Sernda – Message the World</h1>
-  <p>The sovereign messaging infrastructure for creators, campuses, businesses, and more.<br>Powered by <strong>Raiziom</strong>.</p>
-  <button class="btn" onclick="alert('Preview Mode – Full version coming soon')">Try Preview</button>
+  <p>
+    Welcome to the sovereign messaging infrastructure for creators, campuses, businesses, and movements.<br>
+    Powered by <strong>Raiziom</strong> intelligence and built for full independence.
+  </p>
+  <button class="btn" onclick="window.location.href='https://wa.me/message/XXX'">🔓 Unlock Preview Access</button>
   <footer>Raiziom Intelligence Node | Sernda.com</footer>
 </body>
 </html>
