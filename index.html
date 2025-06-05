@@ -2,63 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sernda – Message the World</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.8em;
-      color: #00f2ff;
-      margin-bottom: 0.5em;
-    }
-    p {
-      font-size: 1.2em;
-      max-width: 600px;
-      color: #ccc;
-    }
-    .btn {
-      margin-top: 30px;
-      padding: 12px 28px;
-      background: #00f2ff;
-      color: #000;
-      border: none;
-      border-radius: 50px;
-      font-size: 1em;
-      font-weight: bold;
-      box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .btn:hover {
-      background: #0ff;
-    }
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9em;
-      color: #555;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Paiddail Waitlist</title>
 </head>
 <body>
-  <h1>Sernda – Message the World</h1>
-  <p>
-    Welcome to the sovereign messaging infrastructure for creators, campuses, businesses, and movements.<br>
-    Powered by <strong>Raiziom</strong> intelligence and built for full independence.
-  </p>
-  <button class="btn" onclick="window.location.href='https://wa.me/message/XXX'">🔓 Unlock Preview Access</button>
-  <footer>Raiziom Intelligence Node | Sernda.com</footer>
+    <h1>Welcome to Paiddail</h1>
+    <form action="submit_email.php" method="POST">
+        <input type="email" name="email" required placeholder="Enter your email to join the waitlist">
+        <button type="submit">Join Waitlist</button>
+    </form>
 </body>
 </html>
