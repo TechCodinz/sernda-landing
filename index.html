@@ -1,20 +1,46 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Paiddail - Daily Earnings Empowered</title>
-    <script src="background_animation.js"></script>
+  <meta charset="UTF-8">
+  <title>Paiddail Waitlist – Vercel Version</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body style="background: linear-gradient(to right, #000, #0f0); color: white;">
-    <h1>Welcome to Paiddail</h1>
-    <p>Your journey to daily income starts here.</p>
-    <form method="POST" action="signup.php">
-        <input type="email" name="email" placeholder="Enter your email" required />
-        <button type="submit">Join Waitlist</button>
-    </form>
-    <audio autoplay loop>
-        <source src="background_music.mp3" type="audio/mpeg">
-    </audio>
+<body class="bg-gradient-to-br from-black to-green-900 text-white flex flex-col justify-center items-center h-screen text-center p-4">
+  <h1 class="text-4xl font-bold mb-4 text-green-400 animate-pulse">Welcome to Paiddail</h1>
+  <p class="mb-6 text-gray-300">Get daily income, grow smarter, rise with Raiziom.</p>
+
+  <form id="waitlistForm" class="bg-black/30 p-6 rounded shadow-lg space-y-4 max-w-sm w-full">
+    <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full p-2 rounded text-black">
+    <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full p-2 rounded text-black">
+    <button type="submit" class="bg-green-500 w-full py-2 rounded font-semibold hover:bg-green-600">Join Waitlist</button>
+    <p id="thanks" class="hidden text-green-300 mt-4">✅ You're in! We'll notify you.</p>
+  </form>
+
+  <audio autoplay loop hidden>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function speakWelcome() {
+      const msg = new SpeechSynthesisUtterance("Welcome to Paiddail. Your daily income journey begins now.");
+      msg.pitch = 1.1; msg.rate = 1; msg.volume = 1; speechSynthesis.speak(msg);
+    }
+
+    speakWelcome();
+
+    const scriptURL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec";
+    const form = document.getElementById("waitlistForm");
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form)})
+        .then(() => {
+          document.getElementById("thanks").style.display = "block";
+          form.reset();
+        })
+        .catch(error => alert("Something went wrong."));
+    });
+  </script>
 </body>
 </html>
-    
