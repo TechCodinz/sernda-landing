@@ -1,15 +1,20 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Paiddail Waitlist</title>
+    <title>Paiddail - Daily Earnings Empowered</title>
+    <script src="background_animation.js"></script>
 </head>
-<body>
+<body style="background: linear-gradient(to right, #000, #0f0); color: white;">
     <h1>Welcome to Paiddail</h1>
-    <form action="submit_email.php" method="POST">
-        <input type="email" name="email" required placeholder="Enter your email to join the waitlist">
+    <p>Your journey to daily income starts here.</p>
+    <form method="POST" action="signup.php">
+        <input type="email" name="email" placeholder="Enter your email" required />
         <button type="submit">Join Waitlist</button>
     </form>
+    <audio autoplay loop>
+        <source src="background_music.mp3" type="audio/mpeg">
+    </audio>
 </body>
 </html>
+    
