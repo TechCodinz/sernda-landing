@@ -2,45 +2,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Paiddail Waitlist – Vercel Version</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gradient-to-br from-black to-green-900 text-white flex flex-col justify-center items-center h-screen text-center p-4">
-  <h1 class="text-4xl font-bold mb-4 text-green-400 animate-pulse">Welcome to Paiddail</h1>
-  <p class="mb-6 text-gray-300">Get daily income, grow smarter, rise with Raiziom.</p>
-
-  <form id="waitlistForm" class="bg-black/30 p-6 rounded shadow-lg space-y-4 max-w-sm w-full">
-    <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full p-2 rounded text-black">
-    <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full p-2 rounded text-black">
-    <button type="submit" class="bg-green-500 w-full py-2 rounded font-semibold hover:bg-green-600">Join Waitlist</button>
-    <p id="thanks" class="hidden text-green-300 mt-4">✅ You're in! We'll notify you.</p>
-  </form>
-
-  <audio autoplay loop hidden>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-  </audio>
-
-  <script>
-    function speakWelcome() {
-      const msg = new SpeechSynthesisUtterance("Welcome to Paiddail. Your daily income journey begins now.");
-      msg.pitch = 1.1; msg.rate = 1; msg.volume = 1; speechSynthesis.speak(msg);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sernda – Message the World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
     }
-
-    speakWelcome();
-
-    const scriptURL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec";
-    const form = document.getElementById("waitlistForm");
-
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: "POST", body: new FormData(form)})
-        .then(() => {
-          document.getElementById("thanks").style.display = "block";
-          form.reset();
-        })
-        .catch(error => alert("Something went wrong."));
-    });
-  </script>
+    h1 {
+      font-size: 2.8em;
+      color: #00f2ff;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      color: #ccc;
+    }
+    .btn {
+      margin-top: 30px;
+      padding: 12px 28px;
+      background: #00f2ff;
+      color: #000;
+      border: none;
+      border-radius: 50px;
+      font-size: 1em;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #0ff;
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sernda – Message the World</h1>
+  <p>
+    Welcome to the sovereign messaging infrastructure for creators, campuses, businesses, and movements.<br>
+    Powered by <strong>Raiziom</strong> intelligence and built for full independence.
+  </p>
+  <button class="btn" onclick="window.location.href='https://wa.me/message/+2348089151527'">🔓 Unlock Preview Access</button>
+  <footer>Raiziom Intelligence Node | Sernda.com</footer>
 </body>
 </html>
