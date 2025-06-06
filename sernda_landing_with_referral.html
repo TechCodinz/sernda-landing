@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to Sernda</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(ellipse at center, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #00ffff;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00cccc;
+    }
+    p.description {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #ddd;
+    }
+  </style>
+  <script>
+    function updateRef() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const ref = urlParams.get('ref');
+      if (ref) {
+        document.getElementById('ref').value = ref;
+      }
+    }
+    window.onload = updateRef;
+  </script>
+</head>
+<body>
+  <div class="form-box">
+    <h1>Sernda: Message the World</h1>
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbw8zc47r2g59WhfHCKWcWDmU8eQeMHCJqCfwFQLsTwlYRswNMU_KIx7F5lDkbEXH2X8iw/exec">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="hidden" name="ref" id="ref" />
+      <button type="submit">Join Now</button>
+    </form>
+    <p class="description">Sernda is your sovereign messaging infrastructure powered by Raiziom. Reach audiences. Earn with every message. Elevate your voice.</p>
+  </div>
+</body>
+</html>
