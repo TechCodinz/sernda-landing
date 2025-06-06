@@ -4,61 +4,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sernda – Message the World</title>
+  <title>Welcome to Sernda</title>
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+      background: radial-gradient(ellipse at center, #0f2027, #203a43, #2c5364);
       color: #fff;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
+    }
+    .form-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
       text-align: center;
     }
     h1 {
-      font-size: 2.8em;
-      color: #00f2ff;
-      margin-bottom: 0.5em;
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #00ffff;
     }
-    p {
-      font-size: 1.2em;
-      max-width: 600px;
-      color: #ccc;
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
     }
-    .btn {
-      margin-top: 30px;
-      padding: 12px 28px;
-      background: #00f2ff;
+    button {
+      padding: 10px 20px;
+      background-color: #00ffff;
       color: #000;
       border: none;
-      border-radius: 50px;
-      font-size: 1em;
+      border-radius: 6px;
       font-weight: bold;
-      box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
       cursor: pointer;
-      transition: background 0.3s ease;
     }
-    .btn:hover {
-      background: #0ff;
+    button:hover {
+      background-color: #00cccc;
     }
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9em;
-      color: #555;
+    p.description {
+      font-size: 14px;
+      margin-top: 10px;
+      color: #ddd;
     }
   </style>
 </head>
 <body>
-  <h1>Sernda – Message the World</h1>
-  <p>
-    Welcome to the sovereign messaging infrastructure for creators, campuses, businesses, and movements.<br>
-    Powered by <strong>Raiziom</strong> intelligence and built for full independence.
-  </p>
-  <button class="btn" onclick="window.location.href='https://wa.me/message/+2348089151527'">🔓 Unlock Preview Access</button>
-  <footer>Raiziom Intelligence Node | Sernda.com</footer>
+  <div class="form-box">
+    <h1>Sernda: Message the World</h1>
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbw8zc47r2g59WhfHCKWcWDmU8eQeMHCJqCfwFQLsTwlYRswNMU_KIx7F5lDkbEXH2X8iw/exec">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <button type="submit">Join Now</button>
+    </form>
+    <p class="description">Sernda is your sovereign messaging infrastructure powered by Raiziom. Reach audiences. Earn with every message. Elevate your voice.</p>
+  </div>
 </body>
 </html>
