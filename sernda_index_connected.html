@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Sernda</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(ellipse at center, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+      text-align: center;
+      width: 90%;
+      max-width: 420px;
+      backdrop-filter: blur(6px);
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #00ffff;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      padding: 12px 24px;
+      background-color: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00cccc;
+    }
+    .description {
+      font-size: 14px;
+      margin-top: 12px;
+      color: #ddd;
+    }
+  </style>
+  <script>
+    function attachReferralCode() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const ref = urlParams.get('ref');
+      if (ref) {
+        document.getElementById('ref').value = ref;
+      }
+    }
+    window.onload = attachReferralCode;
+  </script>
+</head>
+<body>
+  <div class="form-box">
+    <h1>Sernda: Message the World</h1>
+    <form method="POST" action="https://script.google.com/macros/s/AKfycby5yx7ySqslh11-FIyZb53Upyt4r-smgS9sbnK-p2kuONsYRgKvMdN4w6zlzsL50mLuOQ/exec">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="hidden" name="ref" id="ref" />
+      <button type="submit">Join Now</button>
+    </form>
+    <p class="description">Your sovereign messaging platform — earn with every message, powered by Raiziom.</p>
+  </div>
+</body>
+</html>
